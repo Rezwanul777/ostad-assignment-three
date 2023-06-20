@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/milligram.css">
+    <title>Post Request</title>
+</head>
+<body>
+    <div id="loader" class="loading d-none"></div>
+    <div class="container">
+        <div class="row">
+          <div class="column">
+            <label> Name</label>
+            <input id="name" type="text">
+            <label>Email</label>
+            <input id="email" type="text">
+            
+            <button onclick="CreateData()" type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function CreateData() {
+            let name=document.getElementById('name').value;
+            let email=document.getElementById('email').value;
+            document.getElementById('loader').classList.remove('d-none')
+
+        var payload = {
+          name: "John Doe",
+            email: "johndoe@example.com"
+                  };
+
+            axios.post("https://api.example.com/submit", payload)
+              .then(response => {
+                     console.log("Response data:", response.data);
+    
+    })
+   document.getElementById('loader').classList.add('d-none')
+    if(res.status===200){
+      window.location="index.html"
+    }
+    else {
+      alert("error")
+    }
+  
+}
+
+      </script>
+</body>
+</html>

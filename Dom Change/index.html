@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Change Attribute Value</title>
+</head>
+<body>
+    <img id="myImage" src="images/image1.jpg" alt="Initial Image">
+  <button onclick="changeImageSource()">Change Image</button>
+
+    <script>
+ function changeImageSource() {
+  var image = document.getElementById("myImage");
+  image.src = "images/image2.jpg";
+  image.alt="change image"
+}
+     </script>
+</body>
+</html>

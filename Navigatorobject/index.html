@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigator object</title>
+</head>
+<body>
+    
+    <script>
+        
+ function getBrowserInfo() {
+  var userAgent = navigator.userAgent;
+  var browserName;
+  var browserVersion;
+
+  if (userAgent.indexOf("Chrome") !== -1) {
+    browserName = "Google Chrome";
+    browserVersion = userAgent.substring(userAgent.indexOf("Chrome/") + 7);
+  } else if (userAgent.indexOf("Firefox") !== -1) {
+    browserName = "Mozilla Firefox";
+    browserVersion = userAgent.substring(userAgent.indexOf("Firefox/") + 8);
+
+    document.write("BrowserName: " + browserName +"<br>" +"<br>")
+    document.write("BrowserVersion: " + browserVersion)
+ 
+  }
+}
+
+getBrowserInfo();
+    </script>
+</body>
+</html>

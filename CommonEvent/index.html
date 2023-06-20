@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Common Events</title>
+</head>
+<body>
+    <h1>Click anywhere on the page</h1>
+  <img id="myImage" src="images/image1.jpg" alt="Initial Image">
+
+  <script>
+    // Attach event listeners
+document.addEventListener("click", handleClick);
+document.addEventListener("keydown", handleKeyDown);
+document.getElementById("myImage").addEventListener("mouseover", handleMouseOver);
+
+    // Event handler for click event
+function handleClick(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  alert("Clicked at coordinates: (" + x + ", " + y + ")");
+}
+
+// Event handler for keydown event
+function handleKeyDown(event) {
+  var keyCode = event.keyCode || event.which;
+  alert("Key pressed. Key code: " + keyCode);
+}
+
+// Event handler for mouseover event
+function handleMouseOver() {
+  var image = document.getElementById("myImage");
+  image.src = "images/image2.jpg";
+}
+
+
+
+  </script>
+</body>
+</html>
